@@ -88,6 +88,10 @@ You must load the following scripts in order:
 For Apple devices, you will need to load the specific scripts we provide for FairPlay DRM.
 
 ```html
+<script src="https://cdn.jsdelivr.net/npm/jwt-decode/build/jwt-decode.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/platform/1.3.6/platform.min.js"></script>
+
 <script src="https://GuardXpert.b-cdn.net/libs/c21eeece-cf05-4770-9233-f7acc104ed12/U2FsdGVkX18Rggg5qvBhC+4bA988UpYDHrHhmzkCJsI=.js"
 integrity="sha256-TkqrlMThafv/N0q5zo5hgEQ4m5MPJZV7r4HBMcTEIkc="
         crossorigin="anonymous"></script>
