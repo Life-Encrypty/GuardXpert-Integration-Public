@@ -68,13 +68,13 @@ You must load the following scripts in order:
     <script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.10.9/shaka-player.compiled.js" integrity="sha512-16krjbsmAuIW+PFjk5jwlvwBe50Fv9o80R0rWQMUKvI8uN8bw3YFhmW5bcxogh79ql2pYurAJvoiUEeW4sH+xA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.10.9/shaka-player.ui.min.js" integrity="sha512-k2UXeOpu53Wnx7wkOTQEHddBtfs49jawEg0Y8co2ZxBLML5h42IcpDPi7alF/rA4BguYAoSBNkZxCrlno7lWAw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <script src="https://GuardXpert.b-cdn.net/libs/b9280d50-20ae-48e7-8341-910f84d4f11b/U2FsdGVkX19gMXNGK06ARAZHsJCvEs%2BEgYBX0yWKPdA%3D.js" integrity="sha256-SuNTJ4xoTaVaLbOjJoh2yPB8lqwr7Le5gi/KlWB/f3U=" 
+    <script src="https://GuardXpert.b-cdn.net/libs/b9280d50-20ae-48e7-8341-910f84d4f11b/i0r5ez.js" integrity="sha256-SFw7GU4Q4+UpvYDO9mfyzxIklo0A1D0XJXgFS8P9F04=" 
     crossorigin="anonymous"></script>
 
-    <script src="https://GuardXpert.b-cdn.net/libs/b9280d50-20ae-48e7-8341-910f84d4f11b/U2FsdGVkX18blo6JHO3Sgi2ohq4JcuO3XteOOW6o9Qg%3D.js" integrity="sha256-U5I9F+ZtWCAswwvxrN3NQ9NDvuh25torDlMiAzEkhto=" 
+    <script src="https://GuardXpert.b-cdn.net/libs/b9280d50-20ae-48e7-8341-910f84d4f11b/h237wgrfubri18wr.js" integrity="sha256-R/DlA7ICI1mMgHgINsFf3Wwyd0IxUENENiO0NaFI9J8=" 
     crossorigin="anonymous"></script>
 
-    <script src="https://GuardXpert.b-cdn.net/libs/b9280d50-20ae-48e7-8341-910f84d4f11b/U2FsdGVkX18ivYfFPp7GjtPuG5mFb0mqYa7SlRcAjfI%3D.js" integrity="sha256-fX7Z8HBrDQdOd8AiIEVNTZ4jbwHl0pgg77qSfTCA1/Y=" 
+    <script src="https://GuardXpert.b-cdn.net/libs/b9280d50-20ae-48e7-8341-910f84d4f11b/sweufbhsvewuhska.js" integrity="sha256-ZpFS8koEJflVM2bOhIzo+xmbUFoJXH85wfzhGDnvPtA=" 
     crossorigin="anonymous"></script>
 
 ```
