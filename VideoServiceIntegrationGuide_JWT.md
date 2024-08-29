@@ -68,7 +68,7 @@ You must load the following scripts in order:
     <script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.10.9/shaka-player.compiled.js" integrity="sha512-16krjbsmAuIW+PFjk5jwlvwBe50Fv9o80R0rWQMUKvI8uN8bw3YFhmW5bcxogh79ql2pYurAJvoiUEeW4sH+xA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.10.9/shaka-player.ui.min.js" integrity="sha512-k2UXeOpu53Wnx7wkOTQEHddBtfs49jawEg0Y8co2ZxBLML5h42IcpDPi7alF/rA4BguYAoSBNkZxCrlno7lWAw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <script src="https://GuardXpert.b-cdn.net/libs/b9280d50-20ae-48e7-8341-910f84d4f11b/i0r5ez.js" integrity="sha256-SFw7GU4Q4+UpvYDO9mfyzxIklo0A1D0XJXgFS8P9F04=" 
+    <script src="https://GuardXpert.b-cdn.net/libs/62de5b78-7500-4608-a273-f43085959fca/e786gbgvyz.js" integrity="sha256-LUAGsR5uZaBV4mOOZyueWdEF/7KVi7VdcZlvwS+ZqUg=" 
     crossorigin="anonymous"></script>
 
     <script src="https://GuardXpert.b-cdn.net/libs/b9280d50-20ae-48e7-8341-910f84d4f11b/h237wgrfubri18wr.js" integrity="sha256-R/DlA7ICI1mMgHgINsFf3Wwyd0IxUENENiO0NaFI9J8=" 
@@ -92,7 +92,7 @@ For Apple devices, You must load the following scripts in order.
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.0.0/controls.min.css"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.0.0/shaka-player.ui.min.js"></script>
 
-    <script src="https://GuardXpert.b-cdn.net/libs/b9280d50-20ae-48e7-8341-910f84d4f11b/U2FsdGVkX18AsUaN2WUd%2BW3bpUfzIZFTjLtJoZrvilE%3D.js" integrity="sha256-FCHLwtiTMQEHk25CPA+R6bPQE0N2isjPljPUGaL/y0Y=" 
+    <script src="https://GuardXpert.b-cdn.net/libs/62de5b78-7500-4608-a273-f43085959fca/a89h32dewisue.js" integrity="sha256-2eIrWYkeJhMEP4LOsmspZ19r5Jy6WRYQuraTBjK44FY=" 
     crossorigin="anonymous"></script>
 
 ```
