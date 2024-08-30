@@ -22,6 +22,7 @@ Before navigating to the video page, the client must store user and platform inf
     "email": "mail@mail.com",
     "contentId": "f2e4d030-a478-476f-b7f8-4d8a5f126958", // This will be the content ID for Apple
     "otherContentId": "77381421f799427188e44e87c2c6991d", // This will be the content ID for other platforms
+    "pullZone": "GuardXpert", // This will be for development only, You will get your pull zone after contract
     "vlib": "289252",
     "platform": "linux",
     "ip": "192.168.1.1",
@@ -36,6 +37,7 @@ Important Notes:
 
     Token Maintenance: The client must ensure that the JWT token is sent to the server with each request for validation and access.
     Server-Side Security: All encoding and decoding operations for the JWT MUST be handled server-side to ensure the security of the token and prevent tampering by the client.
+    Pull Zone: You will get your pull zone after contract.
 
 ## Step 2: Set Up the Video Container
 
