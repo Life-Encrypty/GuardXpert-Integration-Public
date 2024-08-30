@@ -70,10 +70,10 @@ You must load the following scripts in order:
     <script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.10.9/shaka-player.compiled.js" integrity="sha512-16krjbsmAuIW+PFjk5jwlvwBe50Fv9o80R0rWQMUKvI8uN8bw3YFhmW5bcxogh79ql2pYurAJvoiUEeW4sH+xA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.10.9/shaka-player.ui.min.js" integrity="sha512-k2UXeOpu53Wnx7wkOTQEHddBtfs49jawEg0Y8co2ZxBLML5h42IcpDPi7alF/rA4BguYAoSBNkZxCrlno7lWAw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <script src="https://GuardXpert.b-cdn.net/libs/b9280d50-20ae-48e7-8341-910f84d4f11b/e786gbgvyz.js" integrity="sha256-LUAGsR5uZaBV4mOOZyueWdEF/7KVi7VdcZlvwS+ZqUg=" 
+    <script src="https://GuardXpert.b-cdn.net/libs/62de5b78-7500-4608-a273-f43085959fca/e786gbgvyz.js" integrity="sha256-LUAGsR5uZaBV4mOOZyueWdEF/7KVi7VdcZlvwS+ZqUg=" 
     crossorigin="anonymous"></script>
 
-    <script src="https://GuardXpert.b-cdn.net/libs/b9280d50-20ae-48e7-8341-910f84d4f11b/h237wgrfubri18wr.js" integrity="sha256-R/DlA7ICI1mMgHgINsFf3Wwyd0IxUENENiO0NaFI9J8=" 
+    <script src="https://GuardXpert.b-cdn.net/libs/62de5b78-7500-4608-a273-f43085959fca/h6deft20fhr.js" integrity="sha256-Ko2EK8Bxv+y9YxS80mANwkuRHzXZdBIZsfGW2uT3GIY=" 
     crossorigin="anonymous"></script>
 
     <script src="https://GuardXpert.b-cdn.net/libs/b9280d50-20ae-48e7-8341-910f84d4f11b/sweufbhsvewuhska.js" integrity="sha256-ZpFS8koEJflVM2bOhIzo+xmbUFoJXH85wfzhGDnvPtA=" 
