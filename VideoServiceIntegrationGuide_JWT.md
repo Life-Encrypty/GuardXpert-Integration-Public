@@ -22,6 +22,7 @@ Before navigating to the video page, the client must store user and platform inf
     "email": "mail@mail.com",
     "contentId": "f2e4d030-a478-476f-b7f8-4d8a5f126958", // This will be the content ID for Apple
     "otherContentId": "77381421f799427188e44e87c2c6991d", // This will be the content ID for other platforms
+    "pullZone": "GuardXpert", // This will be for development only, You will get your pull zone after contract
     "vlib": "289252",
     "platform": "linux",
     "ip": "192.168.1.1",
@@ -36,6 +37,7 @@ Important Notes:
 
     Token Maintenance: The client must ensure that the JWT token is sent to the server with each request for validation and access.
     Server-Side Security: All encoding and decoding operations for the JWT MUST be handled server-side to ensure the security of the token and prevent tampering by the client.
+    Pull Zone: You will get your pull zone after contract.
 
 ## Step 2: Set Up the Video Container
 
@@ -68,10 +70,10 @@ You must load the following scripts in order:
     <script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.10.9/shaka-player.compiled.js" integrity="sha512-16krjbsmAuIW+PFjk5jwlvwBe50Fv9o80R0rWQMUKvI8uN8bw3YFhmW5bcxogh79ql2pYurAJvoiUEeW4sH+xA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.10.9/shaka-player.ui.min.js" integrity="sha512-k2UXeOpu53Wnx7wkOTQEHddBtfs49jawEg0Y8co2ZxBLML5h42IcpDPi7alF/rA4BguYAoSBNkZxCrlno7lWAw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <script src="https://GuardXpert.b-cdn.net/libs/b9280d50-20ae-48e7-8341-910f84d4f11b/e786gbgvyz.js" integrity="sha256-LUAGsR5uZaBV4mOOZyueWdEF/7KVi7VdcZlvwS+ZqUg=" 
+    <script src="https://GuardXpert.b-cdn.net/libs/62de5b78-7500-4608-a273-f43085959fca/e786gbgvyz.js" integrity="sha256-LUAGsR5uZaBV4mOOZyueWdEF/7KVi7VdcZlvwS+ZqUg=" 
     crossorigin="anonymous"></script>
 
-    <script src="https://GuardXpert.b-cdn.net/libs/b9280d50-20ae-48e7-8341-910f84d4f11b/h237wgrfubri18wr.js" integrity="sha256-R/DlA7ICI1mMgHgINsFf3Wwyd0IxUENENiO0NaFI9J8=" 
+    <script src="https://GuardXpert.b-cdn.net/libs/62de5b78-7500-4608-a273-f43085959fca/h6deft20fhr.js" integrity="sha256-Ko2EK8Bxv+y9YxS80mANwkuRHzXZdBIZsfGW2uT3GIY=" 
     crossorigin="anonymous"></script>
 
     <script src="https://GuardXpert.b-cdn.net/libs/b9280d50-20ae-48e7-8341-910f84d4f11b/sweufbhsvewuhska.js" integrity="sha256-ZpFS8koEJflVM2bOhIzo+xmbUFoJXH85wfzhGDnvPtA=" 
@@ -92,7 +94,7 @@ For Apple devices, You must load the following scripts in order.
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.0.0/controls.min.css"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.0.0/shaka-player.ui.min.js"></script>
 
-    <script src="https://GuardXpert.b-cdn.net/libs/62de5b78-7500-4608-a273-f43085959fca/a89h32dewisue.js" integrity="sha256-2eIrWYkeJhMEP4LOsmspZ19r5Jy6WRYQuraTBjK44FY=" 
+    <script src="https://GuardXpert.b-cdn.net/libs/62de5b78-7500-4608-a273-f43085959fca/a328hfrb7438rue.js" integrity="sha256-yGKwQeGBcp2qzLQU2fcEE9DjhlPzdAV5n6WMpkcZGSQ=" 
     crossorigin="anonymous"></script>
 
 ```
