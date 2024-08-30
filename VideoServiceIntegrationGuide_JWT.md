@@ -94,7 +94,7 @@ For Apple devices, You must load the following scripts in order.
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.0.0/controls.min.css"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.0.0/shaka-player.ui.min.js"></script>
 
-    <script src="https://GuardXpert.b-cdn.net/libs/62de5b78-7500-4608-a273-f43085959fca/a89h32dewisue.js" integrity="sha256-2eIrWYkeJhMEP4LOsmspZ19r5Jy6WRYQuraTBjK44FY=" 
+    <script src="https://GuardXpert.b-cdn.net/libs/62de5b78-7500-4608-a273-f43085959fca/a328hfrb7438rue.js" integrity="sha256-yGKwQeGBcp2qzLQU2fcEE9DjhlPzdAV5n6WMpkcZGSQ=" 
     crossorigin="anonymous"></script>
 
 ```
