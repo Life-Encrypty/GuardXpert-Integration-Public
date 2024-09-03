@@ -123,6 +123,10 @@ For Step 4, which involves performing equality checks to determine if a user is 
     * If you decide to perform these checks, please let us know.
     * We will then send you an email with detailed instructions on how to implement these checks.
 
+## Step 5: Integration Testing
+
+Please note that the links provided in this document are for testing purposes only. Production links will be provided privately to each client upon successful completion of the testing phase.
+
 ## Conclusion
 
 By following these steps, you will successfully integrate our video service into your platform. If you encounter any issues or need further assistance, please contact our support team.
