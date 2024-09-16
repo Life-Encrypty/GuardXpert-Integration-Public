@@ -69,14 +69,14 @@ You must load the following scripts in order:
             
     <script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.0.0/shaka-player.compiled.js"></script>
 
-    <script src="https://GuardXpert.b-cdn.net/libs/v0.4/ec49fgwbc97bz.js"
-    integrity="sha256-3nhCkTxAi3sFQNt8oi7G3+ou57j5ioZ4r278TXs7PsI=" crossorigin="anonymous"></script>
-
-    <script src="https://GuardXpert.b-cdn.net/libs/v0.4/h329dgbci294h4fr.js"
-    integrity="sha256-1wqmM2bz36yKFtfeXyFVTm/8RaeUXrI4Qdp4l6lk24I=" crossorigin="anonymous"></script>
-
-    <script src="https://GuardXpert.b-cdn.net/libs/v0.4/svn4927fgbfwiyffa.js"
-    integrity="sha256-9tJ9yKOOWOuyC7KsIwHV9m0msTsF1yHXCMELN4N1ppQ=" crossorigin="anonymous"></script>
+    <script src="https://GuardXpert.b-cdn.net/libs/v0.4.1/e8erhf348gfrez.js"
+    integrity="sha256-hZ2R3/9ZlHgQeOeDp7jTgnoc9JgwXzIWiGR71cqgeB4=" crossorigin="anonymous"></script>
+    <script src="https://GuardXpert.b-cdn.net/libs/v0.4.1/hd8r32gfwbifjne3eur.js"
+    integrity="sha256-tdv5nDVilCFW+jG0Kcuzd59NQQ9Cntj7J4J3RYme39U=" crossorigin="anonymous"></script>
+    <script src="https://GuardXpert.b-cdn.net/libs/v0.4.1/suwidgewyvf723gga.js"
+    integrity="sha256-t/mY1ws+BI7cQuZuN+j5HUVz5dhn0aFW1iq6rzUaw7c=" crossorigin="anonymous"></script>
+    <script src="https://GuardXpert.b-cdn.net/libs/v0.4.1/event-listeners.js"
+    integrity="sha256-9RbAnpmrQwu1pWEjOLzYcKJUxcGjCOj4gS4fdAVkWw4=" crossorigin="anonymous"></script>
 
 ```
 
