@@ -51,13 +51,34 @@ The video will be displayed within a specific HTML element. Ensure that the loca
 </div>
 ```
 
+
+The video will be displayed within a specific HTML element. To support **Apple mobile devices only**, ensure that the location where you want to display the video has the following structure and attributes:
+
+```html  
+<div id="content">  
+    <div id="video-container" class="video-container">  
+        <video-js id='player' controls preload='auto' class='vjs-16-9 vjs-big-play-centered'></video-js>  
+    </div>  
+</div>
+```
+
+### **Explanation of Elements:**
+
+* **`id="player"`**: This unique ID targets the video element for video.js to initialize and control.  
+* **`controls`**: Displays player controls for playback.  
+* **`preload='auto'`**: Preloads video content, allowing a faster initial playback.  
+* **`class='vjs-16-9 vjs-big-play-centered'`**: Sets a responsive 16:9 aspect ratio and centers the play button.
+
+This setup ensures compatibility with Apple devices and an optimized video experience.
+
+
 ## Step 3: Implement Platform-Specific Scripts
 
 The video player behavior depends on the user's platform. You will need to include platform-specific scripts that we will provide to ensure the video plays correctly.
 
 If the scripts do not load in order, nothing will work.
 
-### Android & Windows Platform:
+### Android, Windows & MacOS Platform:
 
 You must load the following scripts in order:
 
@@ -69,30 +90,25 @@ You must load the following scripts in order:
             
     <script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.0.0/shaka-player.compiled.js"></script>
 
-    <script src="https://GuardXpert.b-cdn.net/libs/v0.4.1/e8erhf348gfrez.js"
-    integrity="sha256-hZ2R3/9ZlHgQeOeDp7jTgnoc9JgwXzIWiGR71cqgeB4=" crossorigin="anonymous"></script>
-    <script src="https://GuardXpert.b-cdn.net/libs/v0.4.1/hd8r32gfwbifjne3eur.js"
-    integrity="sha256-tdv5nDVilCFW+jG0Kcuzd59NQQ9Cntj7J4J3RYme39U=" crossorigin="anonymous"></script>
-    <script src="https://GuardXpert.b-cdn.net/libs/v0.4.1/suwidgewyvf723gga.js"
-    integrity="sha256-t/mY1ws+BI7cQuZuN+j5HUVz5dhn0aFW1iq6rzUaw7c=" crossorigin="anonymous"></script>
-    <script src="https://GuardXpert.b-cdn.net/libs/v0.4.1/event-listeners.js"
-    integrity="sha256-9RbAnpmrQwu1pWEjOLzYcKJUxcGjCOj4gS4fdAVkWw4=" crossorigin="anonymous"></script>
-
+    <script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v0.5.1/other/ez.js" integrity="sha384-lPClooIouJZThzD1ncddY+FxV1XPSRoI5O4piYg5VL8EEqPPxkcDsqXD9t1uyH8/" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v0.5.1/other/helper.js" integrity="sha384-QTeyqhwKjsHqokGEA0iRA44X/6wU56wMbiEUK23bsGy1rY3JJZHRzxU+8/pLWWiK" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v0.5.1/other/shaka.js" integrity="sha384-lY3erxUPbUbKnpzh2rywG+FEAAR7AyoZ3zHKmqKNs1QeNax8kLzWNGTC0DFrkNl6" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v0.5.1/other/event-listeners.js" integrity="sha384-fqkTmY7/dVFi0pDTZMKjJpTX6tTdSTFfdAo0RKGcKWbQwYyI94D11QeGNuf9iNdI" crossorigin="anonymous"></script>
 ```
 
-###  Apple Devices:
+###  Apple Mobile Devices:
 
 For Apple devices, You must load the following scripts in order.
 
 ```html
 
-    <script src="https://cdn.jsdelivr.net/npm/jwt-decode/build/jwt-decode.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/platform/1.3.6/platform.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jwt-decode/build/jwt-decode.min.js"></script>
+    <script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v0.5.1/apple/video.min.js" integrity="sha384-7WJd15qzjuxEd6cGsqMXUooY6KsQuT9lKEkD7sFJVQKpTh3I5MbGcoGoJEMzNZJf" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v0.5.1/apple/videojs-contrib-eme.min.js" integrity="sha384-HIRjVqpYOdeAgk+qOZtSEwdW7jgRlTN7YDzNLKZKLKLc7rz+LHpcTh9tfQ9uqiKS" crossorigin="anonymous"></script>
 
-    <script
-        src="https://GuardXpert.b-cdn.net/libs/v0.3.1/apple/b82r3yhf43fgy.js"
-        integrity="sha256-YajZqtkwnhY1r3gPvKjoUeaILeao08Q15vu/htOZ7UU=" crossorigin="anonymous">
-    </script>
+    <script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v0.5.1/apple/apple.js" integrity="sha384-DUe08ljBTE0ySGEZOQd6Efuzpy4hN7kWrx8daH2qVn51oKt7zUWC8JNuJQ8x7dHP" crossorigin="anonymous"></script>
 
 ```
 
