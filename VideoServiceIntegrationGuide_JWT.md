@@ -10,7 +10,7 @@ Before proceeding, ensure you have the following data ready:
 
 ## Step 1: Set Session Storage Using JWT (Server-Side Encoding and Decoding)
 
-Before navigating to the video page, the client must store user and platform information in the browser's sessionStorage as an HS256 JWT. This token should be placed in a variable called 'otherData'. The JWT will contain the following user data:
+The client must store user and platform information in the browser's sessionStorage as an HS256 JWT. This token should be placed in a variable called 'otherData'. The JWT will contain the following user data:
 
 ```javascript
 {
@@ -51,66 +51,70 @@ The video will be displayed within a specific HTML element. Ensure that the loca
 </div>
 ```
 
-
-The video will be displayed within a specific HTML element. To support **Apple mobile devices only**, ensure that the location where you want to display the video has the following structure and attributes:
-
-```html  
-<div id="content">  
-    <div id="video-container" class="video-container">  
-        <video-js id='player' controls preload='auto' class='vjs-16-9 vjs-big-play-centered'></video-js>  
-    </div>  
-</div>
-```
-
-### **Explanation of Elements:**
-
-* **`id="player"`**: This unique ID targets the video element for video.js to initialize and control.  
-* **`controls`**: Displays player controls for playback.  
-* **`preload='auto'`**: Preloads video content, allowing a faster initial playback.  
-* **`class='vjs-16-9 vjs-big-play-centered'`**: Sets a responsive 16:9 aspect ratio and centers the play button.
-
-This setup ensures compatibility with Apple devices and an optimized video experience.
-
-
 ## Step 3: Implement Platform-Specific Scripts
 
-The video player behavior depends on the user's platform. You will need to include platform-specific scripts that we will provide to ensure the video plays correctly.
+The video player behavior depends on the user's platform. If the scripts do not load in order, nothing will work.
 
-If the scripts do not load in order, nothing will work.
+### List of scripts to load
 
-### Android, Windows & MacOS Platform:
-
-You must load the following scripts in order:
+all scripts in this deom **MUST** be loaded in the order in the same order and same places:
 
 ```html
+<!doctype html>
+<html lang="en">
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/platform/1.3.6/platform.min.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/jwt-decode/build/jwt-decode.min.js"></script>
-            
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.0.0/shaka-player.compiled.js"></script>
-
-    <script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v0.5.1/other/ez.js" integrity="sha384-lPClooIouJZThzD1ncddY+FxV1XPSRoI5O4piYg5VL8EEqPPxkcDsqXD9t1uyH8/" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v0.5.1/other/helper.js" integrity="sha384-QTeyqhwKjsHqokGEA0iRA44X/6wU56wMbiEUK23bsGy1rY3JJZHRzxU+8/pLWWiK" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v0.5.1/other/shaka.js" integrity="sha384-lY3erxUPbUbKnpzh2rywG+FEAAR7AyoZ3zHKmqKNs1QeNax8kLzWNGTC0DFrkNl6" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v0.5.1/other/event-listeners.js" integrity="sha384-fqkTmY7/dVFi0pDTZMKjJpTX6tTdSTFfdAo0RKGcKWbQwYyI94D11QeGNuf9iNdI" crossorigin="anonymous"></script>
-```
-
-###  Apple Mobile Devices:
-
-For Apple devices, You must load the following scripts in order.
-
-```html
-
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shaka Player Demo</title>
+    <script>
+        sessionStorage.setItem('otherData', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQWJkYWxsYWggQXdhZCIsInVzZXJOYW1lIjoidXNlck5hbWUiLCJpZCI6IjEiLCJtb2JpbGUiOiJhZGFkYWRzIiwiY2xpZW50SWQiOiIxMiIsImVtYWlsIjoiYWhtZWRAZ21haWwuY29tIiwiY29udGVudElkIjoiYjFlNTQzODY0Y2NmNDQ3MzkwMWI3OTgyM2UwYTIwNjciLCJvdGhlckNvbnRlbnRJZCI6ImIxZTU0Mzg2NGNjZjQ0NzM5MDFiNzk4MjNlMGEyMDY3IiwicHVsbFpvbmUiOiJndWFyZHRlc3RhY2NvdW50IiwidmxpYiI6IjI4OTI1MiIsInBsYXRmb3JtIjoid2luZG93cyIsImlwIjoiMTkyLjE2OC4xLjEiLCJicm93c2VyIjoiZmlyZWZveCIsIm1vZGVsIjoicG9wIG9zIn0.pEpb2ZCk4AeZ0GUmuJJuP0AzeNWnvY1L8spgnmENp20');
+    </script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/platform/1.3.6/platform.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jwt-decode/build/jwt-decode.min.js"></script>
-    <script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v0.5.1/apple/video.min.js" integrity="sha384-7WJd15qzjuxEd6cGsqMXUooY6KsQuT9lKEkD7sFJVQKpTh3I5MbGcoGoJEMzNZJf" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v0.5.1/apple/videojs-contrib-eme.min.js" integrity="sha384-HIRjVqpYOdeAgk+qOZtSEwdW7jgRlTN7YDzNLKZKLKLc7rz+LHpcTh9tfQ9uqiKS" crossorigin="anonymous"></script>
+    <link rel=stylesheet media='all' type='text/css' href='https://vjs.zencdn.net/8.6.1/video-js.css' />
+    <style>
+        .vjs-poster {
+            background-size: 100% !important;
+        }
+    </style>
+    <script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v0.5.2/video.min.js"
+        integrity="sha384-7WJd15qzjuxEd6cGsqMXUooY6KsQuT9lKEkD7sFJVQKpTh3I5MbGcoGoJEMzNZJf"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v0.5.2/videojs-contrib-eme.min.js"
+        integrity="sha384-HIRjVqpYOdeAgk+qOZtSEwdW7jgRlTN7YDzNLKZKLKLc7rz+LHpcTh9tfQ9uqiKS"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.0.0/shaka-player.compiled.js"></script>
+</head>
 
-    <script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v0.5.1/apple/apple.js" integrity="sha384-DUe08ljBTE0ySGEZOQd6Efuzpy4hN7kWrx8daH2qVn51oKt7zUWC8JNuJQ8x7dHP" crossorigin="anonymous"></script>
+<body>
+    <div id="content">
+        <div id="video-container" class="video-container"></div>
+    </div>
+    <script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v0.5.2/main.js"
+        integrity="sha384-kdweoSaalp110bAncn1RRcuqveaE/tYepmBRdace2mCcwK4FzD8q7tdBSo05epwM"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v0.5.2/apple.js"
+        integrity="sha384-qnEBnbagkLR9ruKx24hGYfggcQ/zQHNRkOGXn5617+dRGHi8D0PREEtuRg6qyGwg"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v0.5.2/ez.js"
+        integrity="sha384-t3gRAw2z0/GcSOjfiA1te/oO+PQLiAeGazSgjcQdv3TNQKtn8bo5x8B5IYT32sSy"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v0.5.2/helper.js"
+        integrity="sha384-eFDANu5KYCzI+ZvhJwFFicnBqrm0o3Pwg67ShRiGeJU+G305IPQf3zOdtBJnB8Ho"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v0.5.2/shaka.js"
+        integrity="sha384-RD6LkM4fZFSbnyCKgRNldvDMS5xV6EtywJDn6poyQ57z502LXfU6VXfc9e3UDTE1"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v0.5.2/event-listeners.js"
+        integrity="sha384-fqkTmY7/dVFi0pDTZMKjJpTX6tTdSTFfdAo0RKGcKWbQwYyI94D11QeGNuf9iNdI"
+        crossorigin="anonymous"></script>
+</body>
 
+</html>
 ```
+
 
 ## Step 4: Perform Equality Checks (Optional):
 
