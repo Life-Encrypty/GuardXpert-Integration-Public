@@ -14,20 +14,20 @@ The client must store user and platform information in the browser's sessionStor
 
 ```javascript
 {
-    "name": "Abdallah Awad",
-    "userName": "userName",
-    "id": "17",
-    "mobile": "+201000000000",
-    "clientId": "4", // This will be provided in production, you can use dummy in it for now
-    "email": "mail@mail.com",
-    "contentId": "9690619a-f9b4-43f3-8d86-a0c770df84dc", // This will be the content ID for Apple
-    "otherContentId": "db9d9c3e3f424c75bea7f69c59db038c", // This will be the content ID for other platforms
-    "pullZone": "GuardXpert", // This will be for development only, You will get your pull zone after contract
-    "vlib": "289252",
-    "platform": "linux",
-    "ip": "192.168.1.1",
-    "browser": "firefox",
-    "model": "pop os"
+  "name": "Abdallah Awad",
+  "userName": "userName",
+  "id": "1",
+  "mobile": "adadads",
+  "clientId": "12", // This will be provided in production, you can use dummy in it for now
+  "email": "ahmed@gmail.com",
+  "contentId": "b1e543864ccf4473901b79823e0a2067", // This will be the content ID for Apple
+  "otherContentId": "b1e543864ccf4473901b79823e0a2067", // This will be the content ID for other platforms
+  "pullZone": "guardtestaccount", // This will be for development only, You will get your pull zone after contract
+  "vlib": "289252",
+  "platform": "windows",
+  "ip": "192.168.1.1",
+  "browser": "firefox",
+  "model": "pop os"
 }
 ```
 
@@ -57,7 +57,7 @@ The video player behavior depends on the user's platform. If the scripts do not 
 
 ### List of scripts to load
 
-all scripts in this deom **MUST** be loaded in the order in the same order and same places:
+all scripts in this deom **MUST** be loaded in the order in the same order and same places, to start the video **wait untill the page fully loaded** then pres the Play Video button it will fire event called **play** this event will start logic to get the video:
 
 ```html
 <!doctype html>
@@ -66,50 +66,76 @@ all scripts in this deom **MUST** be loaded in the order in the same order and s
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Shaka Player Demo</title>
     <script>
-        sessionStorage.setItem('otherData', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQWJkYWxsYWggQXdhZCIsInVzZXJOYW1lIjoidXNlck5hbWUiLCJpZCI6IjEiLCJtb2JpbGUiOiJhZGFkYWRzIiwiY2xpZW50SWQiOiIxMiIsImVtYWlsIjoiYWhtZWRAZ21haWwuY29tIiwiY29udGVudElkIjoiYjFlNTQzODY0Y2NmNDQ3MzkwMWI3OTgyM2UwYTIwNjciLCJvdGhlckNvbnRlbnRJZCI6ImIxZTU0Mzg2NGNjZjQ0NzM5MDFiNzk4MjNlMGEyMDY3IiwicHVsbFpvbmUiOiJndWFyZHRlc3RhY2NvdW50IiwidmxpYiI6IjI4OTI1MiIsInBsYXRmb3JtIjoid2luZG93cyIsImlwIjoiMTkyLjE2OC4xLjEiLCJicm93c2VyIjoiZmlyZWZveCIsIm1vZGVsIjoicG9wIG9zIn0.pEpb2ZCk4AeZ0GUmuJJuP0AzeNWnvY1L8spgnmENp20');
+        sessionStorage.setItem('otherData', 
+        'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQWJkYWxsYWggQXdhZCIsInVzZXJOYW1lIjoidXNlck5hbWUiLCJpZCI6IjEiLCJtb2JpbGUiOiJhZGFkYWRzIiwiY2xpZW50SWQiOiIxMiIsImVtYWlsIjoiYWhtZWRAZ21haWwuY29tIiwiY29udGVudElkIjoiYjFlNTQzODY0Y2NmNDQ3MzkwMWI3OTgyM2UwYTIwNjciLCJvdGhlckNvbnRlbnRJZCI6ImIxZTU0Mzg2NGNjZjQ0NzM5MDFiNzk4MjNlMGEyMDY3IiwicHVsbFpvbmUiOiJndWFyZHRlc3RhY2NvdW50IiwidmxpYiI6IjI4OTI1MiIsInBsYXRmb3JtIjoid2luZG93cyIsImlwIjoiMTkyLjE2OC4xLjEiLCJicm93c2VyIjoiZmlyZWZveCIsIm1vZGVsIjoicG9wIG9zIn0.pEpb2ZCk4AeZ0GUmuJJuP0AzeNWnvY1L8spgnmENp20');
     </script>
+
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/platform/1.3.6/platform.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jwt-decode/build/jwt-decode.min.js"></script>
+
     <link rel=stylesheet media='all' type='text/css' href='https://vjs.zencdn.net/8.6.1/video-js.css' />
     <style>
         .vjs-poster {
             background-size: 100% !important;
         }
     </style>
-    <script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v0.5.2/video.min.js"
+    <script type="text/javascript" src="video.min.js"
         integrity="sha384-7WJd15qzjuxEd6cGsqMXUooY6KsQuT9lKEkD7sFJVQKpTh3I5MbGcoGoJEMzNZJf"
         crossorigin="anonymous"></script>
-    <script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v0.5.2/videojs-contrib-eme.min.js"
+    <script type="text/javascript" src="videojs-contrib-eme.min.js"
         integrity="sha384-HIRjVqpYOdeAgk+qOZtSEwdW7jgRlTN7YDzNLKZKLKLc7rz+LHpcTh9tfQ9uqiKS"
         crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.0.0/shaka-player.compiled.js"></script>
+
+
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.0.0/shaka-player.compiled.js"
+        integrity="sha384-p7JYg5VKn3mxsK9zlXGvFjAq10y5Oct76oUzINSizbjZN449PbwnDe7o2IFmPhlB"
+        crossorigin="anonymous"></script>
+
 </head>
 
 <body>
+
+    <!-- Button to trigger the custom event -->
+    <button id="playButton">Play Video</button>
+
     <div id="content">
         <div id="video-container" class="video-container"></div>
     </div>
-    <script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v0.5.2/main.js"
-        integrity="sha384-kdweoSaalp110bAncn1RRcuqveaE/tYepmBRdace2mCcwK4FzD8q7tdBSo05epwM"
+
+    <script type="text/javascript" src="main.js"
+        integrity="sha384-JPdfdEzd2UHDMewHezMseS5iAnV3W1C6KM05c5TCXnA1MnxXik6qKozdOwDhelbM"
         crossorigin="anonymous"></script>
-    <script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v0.5.2/apple.js"
-        integrity="sha384-qnEBnbagkLR9ruKx24hGYfggcQ/zQHNRkOGXn5617+dRGHi8D0PREEtuRg6qyGwg"
+    <script type="text/javascript" src="apple.js"
+        integrity="sha384-l7HxartyjGdSFiRXjpGa27lcwqgd4UvqqKfkaHeTnVIc4XV+5233tzs8m63xtKz8"
         crossorigin="anonymous"></script>
-    <script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v0.5.2/ez.js"
-        integrity="sha384-t3gRAw2z0/GcSOjfiA1te/oO+PQLiAeGazSgjcQdv3TNQKtn8bo5x8B5IYT32sSy"
+    <script type="text/javascript" src="ez.js"
+        integrity="sha384-6OdRxyoQ7CThTcTFVtrL0VoeN+cKGINck188FDYx8B3xbqVyY0kt126w7nf55KUY"
         crossorigin="anonymous"></script>
-    <script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v0.5.2/helper.js"
-        integrity="sha384-eFDANu5KYCzI+ZvhJwFFicnBqrm0o3Pwg67ShRiGeJU+G305IPQf3zOdtBJnB8Ho"
+    <script type="text/javascript" src="helper.js"
+        integrity="sha384-9gkiFT5rxc4kfH2Yl5p0bMPRr8iH3q8Ht54IDfYA5FiuJLqp1WA44iFvi7HW0dYI"
         crossorigin="anonymous"></script>
-    <script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v0.5.2/shaka.js"
-        integrity="sha384-RD6LkM4fZFSbnyCKgRNldvDMS5xV6EtywJDn6poyQ57z502LXfU6VXfc9e3UDTE1"
+    <script type="text/javascript" src="shaka.js"
+        integrity="sha384-twkccPYcGboZgOlZPaT3BsgBKLh2xvRXaoSldCU6QQvMPyjS4pn3FLKXb9DLCqNK"
         crossorigin="anonymous"></script>
-    <script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v0.5.2/event-listeners.js"
-        integrity="sha384-fqkTmY7/dVFi0pDTZMKjJpTX6tTdSTFfdAo0RKGcKWbQwYyI94D11QeGNuf9iNdI"
+    <script type="text/javascript" src="event-listeners.js"
+        integrity="sha384-gNI2M31Hm3CsjEnuK08ykUJ9qCOYtxn8Mox2888T43u983LMKJaw8NkcUPV/3dmM"
         crossorigin="anonymous"></script>
+    <script>
+        // Get references to the button and video element
+        const playButton = document.getElementById('playButton');
+
+        // Add click event to the button to dispatch the custom event
+        playButton.addEventListener('click', function () {
+            const playEvent = new Event('play');
+            document.dispatchEvent(playEvent);
+        });
+    </script>
 </body>
 
 </html>
