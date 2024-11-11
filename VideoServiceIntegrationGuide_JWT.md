@@ -51,13 +51,63 @@ The video will be displayed within a specific HTML element. Ensure that the loca
 </div>
 ```
 
-## Step 3: Implement Platform-Specific Scripts
+## Step 3: Implement Scripts
 
 The video player behavior depends on the user's platform. If the scripts do not load in order, nothing will work.
 
-### List of scripts to load
+**Note**: you **MUST** perform step 1 before this step
 
-all scripts in this deom **MUST** be loaded in the order in the same order and same places, to start the video **wait untill the page fully loaded** then pres the Play Video button it will fire event called **play** this event will start logic to get the video:
+### 3.1: List of scripts to load
+
+all scripts **MUST** be loaded in the order.
+
+```html
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/platform/1.3.6/platform.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jwt-decode/build/jwt-decode.min.js"></script>
+<link rel=stylesheet media='all' type='text/css' href='https://vjs.zencdn.net/8.6.1/video-js.css' />
+
+<script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v0.5.5/video.min.js"
+    integrity="sha384-7WJd15qzjuxEd6cGsqMXUooY6KsQuT9lKEkD7sFJVQKpTh3I5MbGcoGoJEMzNZJf"
+    crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v0.5.5/videojs-contrib-eme.min.js"
+    integrity="sha384-HIRjVqpYOdeAgk+qOZtSEwdW7jgRlTN7YDzNLKZKLKLc7rz+LHpcTh9tfQ9uqiKS"
+    crossorigin="anonymous"></script>
+
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.0.0/shaka-player.compiled.js"
+        integrity="sha384-p7JYg5VKn3mxsK9zlXGvFjAq10y5Oct76oUzINSizbjZN449PbwnDe7o2IFmPhlB"
+        crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v0.5.5/p.js"
+    integrity="sha384-bn0IXpLp4YlhFQt9oZHkw1Qg/nC6U4qiqjR+F0LzF8/wzNA0dai1kd/HZsR8XxH4"
+    crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v0.5.5/apple.js"
+    integrity="sha384-l7HxartyjGdSFiRXjpGa27lcwqgd4UvqqKfkaHeTnVIc4XV+5233tzs8m63xtKz8"
+    crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v0.5.5/ez.js"
+    integrity="sha384-6OdRxyoQ7CThTcTFVtrL0VoeN+cKGINck188FDYx8B3xbqVyY0kt126w7nf55KUY"
+    crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v0.5.5/helper.js"
+    integrity="sha384-9gkiFT5rxc4kfH2Yl5p0bMPRr8iH3q8Ht54IDfYA5FiuJLqp1WA44iFvi7HW0dYI"
+    crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v0.5.5/shaka.js"
+    integrity="sha384-twkccPYcGboZgOlZPaT3BsgBKLh2xvRXaoSldCU6QQvMPyjS4pn3FLKXb9DLCqNK"
+    crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v0.5.5/event-listeners.js"
+    integrity="sha384-gNI2M31Hm3CsjEnuK08ykUJ9qCOYtxn8Mox2888T43u983LMKJaw8NkcUPV/3dmM"
+    crossorigin="anonymous"></script>
+```
+### 3.2: Trigger Video Playback
+Trigger the play event to start the video playback:
+```js
+const playEvent = new Event('play');
+document.dispatchEvent(playEvent);
+```
+
+### 3.3: Demo Integration
+For simplicity we will load every thing in one page.
+Here’s a full demo that sets up the video player:
 
 ```html
 <!doctype html>
@@ -69,8 +119,7 @@ all scripts in this deom **MUST** be loaded in the order in the same order and s
 
     <title>Shaka Player Demo</title>
     <script>
-        sessionStorage.setItem('otherData', 
-        'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQWJkYWxsYWggQXdhZCIsInVzZXJOYW1lIjoidXNlck5hbWUiLCJpZCI6IjEiLCJtb2JpbGUiOiJhZGFkYWRzIiwiY2xpZW50SWQiOiIxMiIsImVtYWlsIjoiYWhtZWRAZ21haWwuY29tIiwiY29udGVudElkIjoiYjFlNTQzODY0Y2NmNDQ3MzkwMWI3OTgyM2UwYTIwNjciLCJvdGhlckNvbnRlbnRJZCI6ImIxZTU0Mzg2NGNjZjQ0NzM5MDFiNzk4MjNlMGEyMDY3IiwicHVsbFpvbmUiOiJndWFyZHRlc3RhY2NvdW50IiwidmxpYiI6IjI4OTI1MiIsInBsYXRmb3JtIjoid2luZG93cyIsImlwIjoiMTkyLjE2OC4xLjEiLCJicm93c2VyIjoiZmlyZWZveCIsIm1vZGVsIjoicG9wIG9zIn0.pEpb2ZCk4AeZ0GUmuJJuP0AzeNWnvY1L8spgnmENp20');
+        sessionStorage.setItem('otherData', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQWJkYWxsYWggQXdhZCIsInVzZXJOYW1lIjoidXNlck5hbWUiLCJpZCI6IjEiLCJtb2JpbGUiOiJhZGFkYWRzIiwiY2xpZW50SWQiOiIxMiIsImVtYWlsIjoiYWhtZWRAZ21haWwuY29tIiwiY29udGVudElkIjoiYjFlNTQzODY0Y2NmNDQ3MzkwMWI3OTgyM2UwYTIwNjciLCJvdGhlckNvbnRlbnRJZCI6ImIxZTU0Mzg2NGNjZjQ0NzM5MDFiNzk4MjNlMGEyMDY3IiwicHVsbFpvbmUiOiJndWFyZHRlc3RhY2NvdW50IiwidmxpYiI6IjI4OTI1MiIsInBsYXRmb3JtIjoid2luZG93cyIsImlwIjoiMTkyLjE2OC4xLjEiLCJicm93c2VyIjoiZmlyZWZveCIsIm1vZGVsIjoicG9wIG9zIn0.pEpb2ZCk4AeZ0GUmuJJuP0AzeNWnvY1L8spgnmENp20');
     </script>
 
 
@@ -84,10 +133,10 @@ all scripts in this deom **MUST** be loaded in the order in the same order and s
             background-size: 100% !important;
         }
     </style>
-    <script type="text/javascript" src="video.min.js"
+    <script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v0.5.5/video.min.js"
         integrity="sha384-7WJd15qzjuxEd6cGsqMXUooY6KsQuT9lKEkD7sFJVQKpTh3I5MbGcoGoJEMzNZJf"
         crossorigin="anonymous"></script>
-    <script type="text/javascript" src="videojs-contrib-eme.min.js"
+    <script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v0.5.5/videojs-contrib-eme.min.js"
         integrity="sha384-HIRjVqpYOdeAgk+qOZtSEwdW7jgRlTN7YDzNLKZKLKLc7rz+LHpcTh9tfQ9uqiKS"
         crossorigin="anonymous"></script>
 
@@ -108,22 +157,22 @@ all scripts in this deom **MUST** be loaded in the order in the same order and s
         <div id="video-container" class="video-container"></div>
     </div>
 
-    <script type="text/javascript" src="main.js"
-        integrity="sha384-JPdfdEzd2UHDMewHezMseS5iAnV3W1C6KM05c5TCXnA1MnxXik6qKozdOwDhelbM"
+    <script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v0.5.5/p.js"
+        integrity="sha384-bn0IXpLp4YlhFQt9oZHkw1Qg/nC6U4qiqjR+F0LzF8/wzNA0dai1kd/HZsR8XxH4"
         crossorigin="anonymous"></script>
-    <script type="text/javascript" src="apple.js"
+    <script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v0.5.5/apple.js"
         integrity="sha384-l7HxartyjGdSFiRXjpGa27lcwqgd4UvqqKfkaHeTnVIc4XV+5233tzs8m63xtKz8"
         crossorigin="anonymous"></script>
-    <script type="text/javascript" src="ez.js"
+    <script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v0.5.5/ez.js"
         integrity="sha384-6OdRxyoQ7CThTcTFVtrL0VoeN+cKGINck188FDYx8B3xbqVyY0kt126w7nf55KUY"
         crossorigin="anonymous"></script>
-    <script type="text/javascript" src="helper.js"
+    <script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v0.5.5/helper.js"
         integrity="sha384-9gkiFT5rxc4kfH2Yl5p0bMPRr8iH3q8Ht54IDfYA5FiuJLqp1WA44iFvi7HW0dYI"
         crossorigin="anonymous"></script>
-    <script type="text/javascript" src="shaka.js"
+    <script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v0.5.5/shaka.js"
         integrity="sha384-twkccPYcGboZgOlZPaT3BsgBKLh2xvRXaoSldCU6QQvMPyjS4pn3FLKXb9DLCqNK"
         crossorigin="anonymous"></script>
-    <script type="text/javascript" src="event-listeners.js"
+    <script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v0.5.5/event-listeners.js"
         integrity="sha384-gNI2M31Hm3CsjEnuK08ykUJ9qCOYtxn8Mox2888T43u983LMKJaw8NkcUPV/3dmM"
         crossorigin="anonymous"></script>
     <script>
