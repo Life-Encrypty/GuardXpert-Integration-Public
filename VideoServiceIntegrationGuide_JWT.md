@@ -65,38 +65,40 @@ all scripts **MUST** be loaded in the order.
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/platform/1.3.6/platform.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/jwt-decode/build/jwt-decode.min.js"></script>
-<link rel=stylesheet media='all' type='text/css' href='https://vjs.zencdn.net/8.6.1/video-js.css' />
 
-<script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v0.5.6/video.min.js"
-    integrity="sha384-7WJd15qzjuxEd6cGsqMXUooY6KsQuT9lKEkD7sFJVQKpTh3I5MbGcoGoJEMzNZJf"
-    crossorigin="anonymous"></script>
-<script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v0.5.6/videojs-contrib-eme.min.js"
-    integrity="sha384-HIRjVqpYOdeAgk+qOZtSEwdW7jgRlTN7YDzNLKZKLKLc7rz+LHpcTh9tfQ9uqiKS"
-    crossorigin="anonymous"></script>
+<link rel=stylesheet media='all' type='text/css' href='https://vjs.zencdn.net/8.6.1/video-js.css' />
+<style>
+    .vjs-poster {
+        background-size: 100% !important;
+    }
+</style>
+<script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v0.5.7/video.min.js"></script>
+<script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v0.5.7/videojs-contrib-eme.min.js"></script>
+
 
 <script type="text/javascript"
-        src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.0.0/shaka-player.compiled.js"
-        integrity="sha384-p7JYg5VKn3mxsK9zlXGvFjAq10y5Oct76oUzINSizbjZN449PbwnDe7o2IFmPhlB"
-        crossorigin="anonymous"></script>
+    src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.0.0/shaka-player.compiled.js"></script>
 
-<script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v0.5.6/p.js"
+
+<script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v0.5.7/p.js"
     integrity="sha384-bn0IXpLp4YlhFQt9oZHkw1Qg/nC6U4qiqjR+F0LzF8/wzNA0dai1kd/HZsR8XxH4"
     crossorigin="anonymous"></script>
-<script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v0.5.6/apple.js"
-    integrity="sha384-l7HxartyjGdSFiRXjpGa27lcwqgd4UvqqKfkaHeTnVIc4XV+5233tzs8m63xtKz8"
+<script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v0.5.7/apple.js"
+    integrity="sha384-rbIcZGUXQpBVgW54jb04mORuhoFFe2/Bh9c5d97gO8ZiFGtCEYIS9QvL9jalfION"
     crossorigin="anonymous"></script>
-<script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v0.5.6/ez.js"
-    integrity="sha384-6OdRxyoQ7CThTcTFVtrL0VoeN+cKGINck188FDYx8B3xbqVyY0kt126w7nf55KUY"
+<script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v0.5.7/ez.js"
+    integrity="sha384-jTt2xMVzY4PrC+0dNktgxqt/y0KIVbzGuA0Rqzyt/33QR5jPRqn2vH5MjmzGnt/K"
     crossorigin="anonymous"></script>
-<script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v0.5.6/helper.js"
+<script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v0.5.7/helper.js"
     integrity="sha384-9gkiFT5rxc4kfH2Yl5p0bMPRr8iH3q8Ht54IDfYA5FiuJLqp1WA44iFvi7HW0dYI"
     crossorigin="anonymous"></script>
-<script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v0.5.6/shaka.js"
+<script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v0.5.7/shaka.js"
     integrity="sha384-twkccPYcGboZgOlZPaT3BsgBKLh2xvRXaoSldCU6QQvMPyjS4pn3FLKXb9DLCqNK"
     crossorigin="anonymous"></script>
-<script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v0.5.6/event-listeners.js"
-    integrity="sha384-gNI2M31Hm3CsjEnuK08ykUJ9qCOYtxn8Mox2888T43u983LMKJaw8NkcUPV/3dmM"
+<script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v0.5.7/event-listeners.js"
+    integrity="sha384-GHxaFNd+85Dc/WDURhwuan+swaXLPdlVD4rkNC0hSzHVXbBRkJvETPL/mVrv0H3x"
     crossorigin="anonymous"></script>
+<script>
 ```
 ### 3.2: Trigger Video Playback
 Trigger the play event to start the video playback:
@@ -133,18 +135,12 @@ Here’s a full demo that sets up the video player:
             background-size: 100% !important;
         }
     </style>
-    <script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v0.5.6/video.min.js"
-        integrity="sha384-7WJd15qzjuxEd6cGsqMXUooY6KsQuT9lKEkD7sFJVQKpTh3I5MbGcoGoJEMzNZJf"
-        crossorigin="anonymous"></script>
-    <script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v0.5.6/videojs-contrib-eme.min.js"
-        integrity="sha384-HIRjVqpYOdeAgk+qOZtSEwdW7jgRlTN7YDzNLKZKLKLc7rz+LHpcTh9tfQ9uqiKS"
-        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v0.5.7/video.min.js"></script>
+    <script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v0.5.7/videojs-contrib-eme.min.js"></script>
 
 
     <script type="text/javascript"
-        src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.0.0/shaka-player.compiled.js"
-        integrity="sha384-p7JYg5VKn3mxsK9zlXGvFjAq10y5Oct76oUzINSizbjZN449PbwnDe7o2IFmPhlB"
-        crossorigin="anonymous"></script>
+        src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.0.0/shaka-player.compiled.js"></script>
 
 </head>
 
@@ -157,23 +153,23 @@ Here’s a full demo that sets up the video player:
         <div id="video-container" class="video-container"></div>
     </div>
 
-    <script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v0.5.6/p.js"
+    <script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v0.5.7/p.js"
         integrity="sha384-bn0IXpLp4YlhFQt9oZHkw1Qg/nC6U4qiqjR+F0LzF8/wzNA0dai1kd/HZsR8XxH4"
         crossorigin="anonymous"></script>
-    <script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v0.5.6/apple.js"
-        integrity="sha384-l7HxartyjGdSFiRXjpGa27lcwqgd4UvqqKfkaHeTnVIc4XV+5233tzs8m63xtKz8"
+    <script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v0.5.7/apple.js"
+        integrity="sha384-rbIcZGUXQpBVgW54jb04mORuhoFFe2/Bh9c5d97gO8ZiFGtCEYIS9QvL9jalfION"
         crossorigin="anonymous"></script>
-    <script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v0.5.6/ez.js"
-        integrity="sha384-6OdRxyoQ7CThTcTFVtrL0VoeN+cKGINck188FDYx8B3xbqVyY0kt126w7nf55KUY"
+    <script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v0.5.7/ez.js"
+        integrity="sha384-jTt2xMVzY4PrC+0dNktgxqt/y0KIVbzGuA0Rqzyt/33QR5jPRqn2vH5MjmzGnt/K"
         crossorigin="anonymous"></script>
-    <script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v0.5.6/helper.js"
+    <script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v0.5.7/helper.js"
         integrity="sha384-9gkiFT5rxc4kfH2Yl5p0bMPRr8iH3q8Ht54IDfYA5FiuJLqp1WA44iFvi7HW0dYI"
         crossorigin="anonymous"></script>
-    <script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v0.5.6/shaka.js"
+    <script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v0.5.7/shaka.js"
         integrity="sha384-twkccPYcGboZgOlZPaT3BsgBKLh2xvRXaoSldCU6QQvMPyjS4pn3FLKXb9DLCqNK"
         crossorigin="anonymous"></script>
-    <script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v0.5.6/event-listeners.js"
-        integrity="sha384-gNI2M31Hm3CsjEnuK08ykUJ9qCOYtxn8Mox2888T43u983LMKJaw8NkcUPV/3dmM"
+    <script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v0.5.7/event-listeners.js"
+        integrity="sha384-GHxaFNd+85Dc/WDURhwuan+swaXLPdlVD4rkNC0hSzHVXbBRkJvETPL/mVrv0H3x"
         crossorigin="anonymous"></script>
     <script>
         // Get references to the button and video element
