@@ -72,37 +72,37 @@ all scripts **MUST** be loaded in the order.
         background-size: 100% !important;
     }
 </style>
-<script src='https://GuardXpert.b-cdn.net/libs/v0.5.8/video.min.js'></script>
-<script src='https://GuardXpert.b-cdn.net/libs/v0.5.8/videojs-contrib-eme.min.js'></script>
+<script src='https://GuardXpert.b-cdn.net/libs/v0.5.9/video.min.js'></script>
+<script src='https://GuardXpert.b-cdn.net/libs/v0.5.9/videojs-contrib-eme.min.js'></script>
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.0.0/shaka-player.compiled.js"></script>
 
 
-<script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v0.5.8/p.js"
-    integrity="sha384-QOBF+4Hq3ijtdmlWW/ilb4inKanG4Un7wTt4vsfBWjvx3cLUD5JbSgjeVVjnHRDd"
+<script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v5.9/p.js"
+    integrity="sha384-NeD0gCdVE0Ict8kOaqZitwaT6C2IQ0o5H4mk8YzDqr+Re7jGZmDxojfg2DBqCQnS"
     crossorigin="anonymous"></script>
 
-<script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v0.5.8/ez.js"
-    integrity="sha384-zlGwtitxUt2wz1pNFTzcLqEuGf0gKyXLBpYYkS7cxWQ9davD/x+Cy2mdjL2/y0XE"
+<script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v5.9/ez.js"
+    integrity="sha384-cGR4/xIfoKv593eoenhZK0rIR7bRwW7OLlkNmlbXUg4d246g9ySQT/rRFLJgl4qj"
     crossorigin="anonymous"></script>
 
-<script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v0.5.8/helper.js"
-    integrity="sha384-4h7oMUbLWeZjMQ7cqUQBKrRns/nyQzpaXeiSHDTnbbeEkZGMi2vkC+deUJvZvJzh"
+<script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v5.9/helper.js"
+    integrity="sha384-T9v1Fh4b6wrEzcc7a+T738FLnipRInjvNT37u1n2LzPp0PKtlA4QWxu8G67y/2/5"
     crossorigin="anonymous"></script>
 
-<script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v0.5.8/shaka.js"
-    integrity="sha384-b4DJ9+cLFBXW1405cI7jAUtgz/s3eoDchrhJ0dd3ywagW6inOX5DbHwYbi8ejjPf"
+
+<script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v5.9/shaka.js"
+    integrity="sha384-/HdQgce8xqFmzhH4cEAbVwMXU/rNb1FEOWs3YlYLo21irvckvO3vArWclSjdo+R8"
     crossorigin="anonymous"></script>
 
-<script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v0.5.8/apple.js"
-    integrity="sha384-W5dSWOdrYqdZsU2G0wtnQp7EBOPlpz4xF8iAClon+grNaERcgZ89514BgjxusWjC"
+<script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v5.9/apple.js"
+    integrity="sha384-4w9fxkd7ini69QJZNedm6Lrx5lg5ixdnOBZxde4b4wyrJpbfLvT1ZmzKDkMiWYSU"
     crossorigin="anonymous"></script>
 
-<script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v0.5.8/event-listeners.js"
+<script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v0.5.9/event-listeners.js"
     integrity="sha384-GHxaFNd+85Dc/WDURhwuan+swaXLPdlVD4rkNC0hSzHVXbBRkJvETPL/mVrv0H3x"
     crossorigin="anonymous"></script>
-<script>
 ```
 ### 3.2: Trigger Video Playback
 Trigger the play event to start the video playback:
@@ -139,8 +139,8 @@ Here’s a full demo that sets up the video player:
             background-size: 100% !important;
         }
     </style>
-    <script src='https://GuardXpert.b-cdn.net/libs/v0.5.8/video.min.js'></script>
-    <script src='https://GuardXpert.b-cdn.net/libs/v0.5.8/videojs-contrib-eme.min.js'></script>
+    <script src='https://GuardXpert.b-cdn.net/libs/v0.5.9/video.min.js'></script>
+    <script src='https://GuardXpert.b-cdn.net/libs/v0.5.9/videojs-contrib-eme.min.js'></script>
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.0.0/shaka-player.compiled.js"></script>
@@ -156,27 +156,28 @@ Here’s a full demo that sets up the video player:
         <div id="video-container" class="video-container"></div>
     </div>
 
-    <script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v0.5.8/p.js"
-        integrity="sha384-QOBF+4Hq3ijtdmlWW/ilb4inKanG4Un7wTt4vsfBWjvx3cLUD5JbSgjeVVjnHRDd"
+    <script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v5.9/p.js"
+        integrity="sha384-NeD0gCdVE0Ict8kOaqZitwaT6C2IQ0o5H4mk8YzDqr+Re7jGZmDxojfg2DBqCQnS"
         crossorigin="anonymous"></script>
 
-    <script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v0.5.8/ez.js"
-        integrity="sha384-zlGwtitxUt2wz1pNFTzcLqEuGf0gKyXLBpYYkS7cxWQ9davD/x+Cy2mdjL2/y0XE"
+    <script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v5.9/ez.js"
+        integrity="sha384-cGR4/xIfoKv593eoenhZK0rIR7bRwW7OLlkNmlbXUg4d246g9ySQT/rRFLJgl4qj"
         crossorigin="anonymous"></script>
-
-    <script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v0.5.8/helper.js"
-        integrity="sha384-4h7oMUbLWeZjMQ7cqUQBKrRns/nyQzpaXeiSHDTnbbeEkZGMi2vkC+deUJvZvJzh"
+    
+    <script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v5.9/helper.js"
+        integrity="sha384-T9v1Fh4b6wrEzcc7a+T738FLnipRInjvNT37u1n2LzPp0PKtlA4QWxu8G67y/2/5"
         crossorigin="anonymous"></script>
-
-    <script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v0.5.8/shaka.js"
-        integrity="sha384-b4DJ9+cLFBXW1405cI7jAUtgz/s3eoDchrhJ0dd3ywagW6inOX5DbHwYbi8ejjPf"
+    
+    
+    <script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v5.9/shaka.js"
+        integrity="sha384-/HdQgce8xqFmzhH4cEAbVwMXU/rNb1FEOWs3YlYLo21irvckvO3vArWclSjdo+R8"
         crossorigin="anonymous"></script>
-
-    <script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v0.5.8/apple.js"
-        integrity="sha384-W5dSWOdrYqdZsU2G0wtnQp7EBOPlpz4xF8iAClon+grNaERcgZ89514BgjxusWjC"
+    
+    <script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v5.9/apple.js"
+        integrity="sha384-4w9fxkd7ini69QJZNedm6Lrx5lg5ixdnOBZxde4b4wyrJpbfLvT1ZmzKDkMiWYSU"
         crossorigin="anonymous"></script>
-
-    <script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v0.5.8/event-listeners.js"
+    
+    <script type="text/javascript" src="https://GuardXpert.b-cdn.net/libs/v0.5.9/event-listeners.js"
         integrity="sha384-GHxaFNd+85Dc/WDURhwuan+swaXLPdlVD4rkNC0hSzHVXbBRkJvETPL/mVrv0H3x"
         crossorigin="anonymous"></script>
 
