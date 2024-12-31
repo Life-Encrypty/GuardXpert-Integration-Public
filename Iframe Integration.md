@@ -3,7 +3,6 @@
 
 Welcome to the GuardXpert video embedding guide. This document explains how to use the GuardXpert iframe in your own website or application. Depending on your use case, you’ll follow slightly different steps, but the core concept is the same: upload a video in our dashboard, retrieve its **videoID**, and then embed the provided `<iframe>` code wherever you want the video to be displayed.
 
-—
 
 ## Table of Contents
 1. Overview  
@@ -18,13 +17,11 @@ Welcome to the GuardXpert video embedding guide. This document explains how to u
 6. FAQ  
 7. Contact & Support
 
-—
 
 ## Overview
 
 GuardXpert provides a straightforward video hosting and streaming solution. Once you upload your video to our dashboard and the video processing is complete, we generate a shareable `<iframe>` snippet. You can simply copy and paste this snippet into your own webpage or application to display the video securely.
 
-—
 
 ## Prerequisites
 
@@ -32,7 +29,6 @@ GuardXpert provides a straightforward video hosting and streaming solution. Once
 - **Browser or Development Environment**: Ensure you have a modern browser for testing the embedded iframe.  
 - **Permission to Edit Webpages**: You (or your development team) must be able to modify the HTML of your site to embed the iframe.
 
-—
 
 ## Embedding the Video
 
@@ -73,7 +69,6 @@ https://GuardXpert.b-cdn.net/libs/iframe-query2/main.html?videoID=<VIDEO_ID>&acc
 
 Replace `<VIDEO_ID>` with your actual video ID, and `<ACCOUNT_NAME>` with the provided account.
 
-—
 
 ## Use Cases
 
@@ -113,7 +108,6 @@ Example:
 </iframe>
 ```
 
-—
 
 ### 2. Testing Users
 
@@ -176,7 +170,6 @@ Example (Production after Upgrade):
 4. **Console Errors**  
    - Check your browser’s developer console. If you see errors related to the iframe URL, confirm you have the correct parameters.
 
-—
 
 ## FAQ
 
@@ -189,15 +182,13 @@ A: GuardXpert uses secure CDN endpoints, and the iframe only loads from our trus
 **Q3: Can I customize the video player look-and-feel?**  
 A: Currently, styling is controlled on the GuardXpert side. Future updates may allow user-defined themes or colors.
 
-—
 
 ## Contact & Support
 
-- **Email**: support@guardxpert.com  
+- **Email**: info@guardxpert.com  
 
 If you encounter any issues not covered in this documentation, please reach out to our support team. We’ll be happy to assist!
 
-—
 
 _Last updated: 2024-12-31_  
 _GuardXpert © 2024. All rights reserved._
