@@ -40,7 +40,7 @@ GuardXpert provides a straightforward video hosting and streaming solution. Once
 
 Below is the basic structure of the iframe you will receive:
 
-‘’’html
+```html
 <iframe
   id=“videoIframe”
   src=“https://GuardXpert.b-cdn.net/libs/iframe-query2/main.html?videoID=20167d2446414b99bcbf4783eaeabdd9&account=GuardXpert”
@@ -48,7 +48,7 @@ Below is the basic structure of the iframe you will receive:
   height=“450”
   allow=“encrypted-media; fullscreen; autoplay”>
 </iframe>
-‘’’
+```
 
 **Key Attributes**:
 
@@ -103,6 +103,7 @@ This scenario is for users who have a production GuardXpert account. Here’s th
 
 Example:
 
+``` html
 <iframe
   id=“videoIframe”
   src=“https://GuardXpert.b-cdn.net/libs/iframe-query2/main.html?videoID=<YOUR_VIDEO_ID>&account=<YOUR_ACCOUNT>”
@@ -110,6 +111,7 @@ Example:
   height=“450”
   allow=“encrypted-media; fullscreen; autoplay”>
 </iframe>
+```
 
 —
 
@@ -134,6 +136,7 @@ For testing purposes (e.g., trials, demos, or staging environments), you’ll fo
 
 Example (Test Environment):
 
+``` html
 <iframe
   id=“videoIframe”
   src=“https://GuardXpert.b-cdn.net/libs/iframe-query2/main.html?videoID=<YOUR_VIDEO_ID>&account=testAccount”
@@ -141,9 +144,11 @@ Example (Test Environment):
   height=“450”
   allow=“encrypted-media; fullscreen; autoplay”>
 </iframe>
+```
 
 Example (Production after Upgrade):
 
+``` html
 <iframe
   id=“videoIframe”
   src=“https://GuardXpert.b-cdn.net/libs/iframe-query2/main.html?videoID=<YOUR_VIDEO_ID>&account=GuardXpert”
@@ -151,6 +156,7 @@ Example (Production after Upgrade):
   height=“450”
   allow=“encrypted-media; fullscreen; autoplay”>
 </iframe>
+```
 
 —
 
