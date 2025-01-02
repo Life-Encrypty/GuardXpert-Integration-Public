@@ -36,13 +36,11 @@ GuardXpert provides a straightforward video hosting and streaming solution. Once
 
 Below is the basic structure of the iframe you will receive:
 
-```html
+``` html
 <iframe
-  id=“videoIframe”
-  src=“https://GuardXpert.b-cdn.net/libs/V5.9-ifram-quary-arabic/main.html?videoID=20167d2446414b99bcbf4783eaeabdd9&account=GuardXpert”
-  width=“800”
-  height=“450”
-  allow=“encrypted-media; fullscreen; autoplay”>
+   id="videoIframe"
+   src="https://GuardXpert.b-cdn.net/libs/V5.9-ifram-quary-arabic/main.html?videoID=20167d2446414b99bcbf4783eaeabdd9&account=GuardXpert"
+   width="800" height="450" allow="encrypted-media; fullscreen; autoplay">
 </iframe>
 ```
 
@@ -65,7 +63,7 @@ Below is the basic structure of the iframe you will receive:
 
 Putting it all together, the `src` URL should look like this:
 
-https://GuardXpert.b-cdn.net/libs/iframe-query2/main.html?videoID=<VIDEO_ID>&account=<ACCOUNT_NAME>
+https://GuardXpert.b-cdn.net/libs/V5.9-ifram-quary-arabic/main.html?videoID=<VIDEO_ID>&account=<ACCOUNT_NAME>
 
 Replace `<VIDEO_ID>` with your actual video ID, and `<ACCOUNT_NAME>` with the provided account.
 
@@ -131,7 +129,7 @@ Example (Test Environment):
 ``` html
 <iframe
   id=“videoIframe”
-  src=“https://GuardXpert.b-cdn.net/libs/iframe-query2/main.html?videoID=<YOUR_VIDEO_ID>&account=testAccount”
+  src=“https://GuardXpert.b-cdn.net/libs/V5.9-ifram-quary-arabic/main.html?videoID=<YOUR_VIDEO_ID>&account=testAccount”
   width=“800”
   height=“450”
   allow=“encrypted-media; fullscreen; autoplay”>
@@ -143,7 +141,7 @@ Example (Production after Upgrade):
 ``` html
 <iframe
   id=“videoIframe”
-  src=“https://GuardXpert.b-cdn.net/libs/iframe-query2/main.html?videoID=<YOUR_VIDEO_ID>&account=GuardXpert”
+  src=“https://GuardXpert.b-cdn.net/libs/V5.9-ifram-quary-arabic/main.html?videoID=<YOUR_VIDEO_ID>&account=GuardXpert”
   width=“800”
   height=“450”
   allow=“encrypted-media; fullscreen; autoplay”>
